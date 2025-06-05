@@ -155,7 +155,7 @@ body {
 
 .toggle-btn {
   max-width: 600px;
-  width: 90%;
+  width: 100%;
   text-align: center;
   cursor: pointer;
 }
