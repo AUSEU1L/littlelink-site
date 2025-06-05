@@ -101,7 +101,7 @@ body {
 .row-two-columns {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 16px; /* Instagram-TikTok arası boşluk kadar */
   margin: 10px 0 25px 0;
 }
 
@@ -109,10 +109,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 200px; /* İstersen değiştirilebilir */
+  width: calc((600px - 16px) / 2); /* Maks genişlikten boşluğu çıkarıp ikiye böl */
+  max-width: 280px; /* Mobilde genişlik kontrolü */
 }
 
-/* Sosyal medya renkleri ve özel buton stilleri */
+/* .column içindeki link-buttons a elementleri kolon genişliğine tam uyar */
+.row-two-columns .column a {
+  width: 100%;
+}
 
 /* Instagram butonu */
 .instagram {
