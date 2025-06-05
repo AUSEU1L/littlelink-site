@@ -268,3 +268,9 @@ footer a {
   border: 1px solid #521a44;
   color: #f0d1d6;
 }
+/* Animasyonlu buton efektleri */
+.link-buttons a.animate {
+  transform: scale(1.1);
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
