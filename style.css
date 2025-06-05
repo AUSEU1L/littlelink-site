@@ -138,7 +138,7 @@ body {
 }
 
 /* Spotify metalik yeşil */
-.spotify.metallic-grey {
+.spotify.metallic-black {
   background: linear-gradient(135deg, #1b1c1e, #2e2f31 40%, #3b3c3f 60%, #0f0f10);
   border: 1px solid #444;
   box-shadow:
