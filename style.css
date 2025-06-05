@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Gotika Black';
-  src: url('./fonts/GotikaBlack.otf') format('opentype');
+  font-family: 'Fiendish';
+  src: url('./fonts/Fiendish.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -8,7 +8,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'GotikaBlack', cursive, sans-serif;
+  font-family: 'Fiendish', cursive, sans-serif;
   background-color: #000;
   color: #f0f0f0;
   display: flex;
@@ -48,7 +48,7 @@ body {
   color: #aaa;
   font-size: 14px;
   margin-bottom: 25px;
-  font-family: 'GotikaBlack', sans-serif;
+  font-family: 'Fiendish', sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
 }
@@ -61,7 +61,7 @@ body {
   color: #e0e0e0;
   text-decoration: none;
   font-weight: 700;
-  font-family: 'GotikaBlack', cursive, sans-serif;
+  font-family: 'Fiendish', cursive, sans-serif;
   background: linear-gradient(135deg, #6e7a8a, #a1a9b8 40%, #8a94a3 60%, #4a5160);
   box-shadow:
     inset 0 1px 3px rgba(255, 255, 255, 0.7),
@@ -96,7 +96,7 @@ footer {
   font-size: 12px;
   margin-top: 30px;
   color: #666;
-  font-family: 'GotikaBlack', sans-serif;
+  font-family: 'Fiendish', sans-serif;
 }
 
 footer a {
