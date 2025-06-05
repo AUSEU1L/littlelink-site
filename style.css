@@ -114,19 +114,33 @@ body {
 }
 
 .instagram {
-  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
-  border-color: #a23274;
+    background: linear-gradient(135deg, #1b1c1e, #2e2f31 40%, #3b3c3f 60%, #0f0f10);
+  border: 1px solid #444;
+  color: #e0e0e0;
+  box-shadow: 
+    inset 0 1px 3px rgba(255, 255, 255, 0.7),
+    inset 0 -1px 6px rgba(0, 0, 0, 0.7),
+    0 4px 6px rgba(0, 0, 0, 0.6)
 }
 
 .tiktok {
-  background: #010101;
-  border: 1px solid #fff;
-  color: #fff;
+    background: linear-gradient(135deg, #1b1c1e, #2e2f31 40%, #3b3c3f 60%, #0f0f10);
+  border: 1px solid #444;
+  color: #e0e0e0;
+  box-shadow: 
+    inset 0 1px 3px rgba(255, 255, 255, 0.7),
+    inset 0 -1px 6px rgba(0, 0, 0, 0.7),
+    0 4px 6px rgba(0, 0, 0, 0.6)
 }
 
 .youtube {
-  background: #FF0000;
-  border-color: #cc0000;
+    background: linear-gradient(135deg, #1b1c1e, #2e2f31 40%, #3b3c3f 60%, #0f0f10);
+  border: 1px solid #444;
+  color: #e0e0e0;
+  box-shadow: 
+    inset 0 1px 3px rgba(255, 255, 255, 0.7),
+    inset 0 -1px 6px rgba(0, 0, 0, 0.7),
+    0 4px 6px rgba(0, 0, 0, 0.6)
 }
 
 .spotify.metallic-black,
