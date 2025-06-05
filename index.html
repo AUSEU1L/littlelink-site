@@ -16,14 +16,14 @@
     <p class="subtitle">Multi-Genre Music Producer</p>
 
     <div class="link-buttons">
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/cotard/" target="_blank" class="instagram">Instagram</a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/cotard/" target="_blank" class="instagram">Instagram</a>
 
-  <!-- TikTok -->
-  <a href="https://www.tiktok.com/@cotard" target="_blank" class="tiktok">TikTok</a>
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@cotard" target="_blank" class="tiktok">TikTok</a>
 
-   <button class="toggle-btn spotify metallic-green" onclick="toggleTab('spotify')">Spotify</button>
-      <div id="spotify" class="tab">
+      <button class="toggle-btn spotify metallic-green" onclick="toggleTab('spotify')">Spotify</button>
+      <div id="spotify" class="tab" style="display:none;">
         <a href="https://open.spotify.com/intl-tr/artist/7jmEQhBTQ9WVTdHmclo7GC" target="_blank">Cotard</a>
         <a href="https://open.spotify.com/intl-tr/artist/2E6OrWYdJszPLi0WQRyv6K" target="_blank">Sinozoph</a>
         <a href="https://open.spotify.com/intl-tr/artist/5oDhbTZKQ99UfFX60mrn3W" target="_blank">Cotard Beatz</a>
@@ -31,21 +31,75 @@
       </div>
 
       <button class="toggle-btn soundcloud metallic-grey-orange" onclick="toggleTab('soundcloud')">SoundCloud</button>
-      <div id="soundcloud" class="tab">
+      <div id="soundcloud" class="tab" style="display:none;">
         <a href="https://soundcloud.com/cotard" target="_blank">Cotard</a>
         <a href="http://soundcloud.com/kanichen-319883570" target="_blank">Kanichen</a>
+      </div>
 
-  <!-- Youtube -->
-  <a href="https://www.youtube.com/cotard" target="_blank" class="youtube">YouTube</a>
-</div>
-
-</div>
+      <!-- Youtube -->
+      <a href="https://www.youtube.com/cotard" target="_blank" class="youtube">YouTube</a>
+    </div>
 
     <footer>
       <p><a href="#">© HAMAMBOII$CLUB ®KROMVISION </a> · All links by Cotard</p>
     </footer>
   </main>
-</body>
-<script src="scripts.js"></script>
 
+  <script src="scripts.js"></script>
+
+  <script>
+    // Toggle tab göster/gizle fonksiyonu
+    function toggleTab(tabId) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => {
+        if (tab.id === tabId) {
+          tab.style.display = tab.style.display === 'block' ? 'none' : 'block';
+        } else {
+          tab.style.display = 'none';
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const spotifyButtons = document.querySelectorAll('#spotify a');
+      const soundcloudButtons = document.querySelectorAll('#soundcloud a');
+
+      function animateButtons(buttons) {
+        buttons.forEach((btn, i) => {
+          btn.style.opacity = '0';
+          btn.style.transform = 'scale(0.9)';
+          setTimeout(() => {
+            btn.classList.add('animate');
+            btn.style.opacity = '1';
+            btn.style.transform = 'scale(1)';
+            setTimeout(() => {
+              btn.classList.remove('animate');
+            }, 400);
+          }, i * 300);
+        });
+      }
+
+      spotifyButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          animateButtons(spotifyButtons);
+          setTimeout(() => {
+            window.open(btn.href, '_blank');
+          }, spotifyButtons.length * 300 + 400);
+        });
+      });
+
+      soundcloudButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          animateButtons(soundcloudButtons);
+          setTimeout(() => {
+            window.open(btn.href, '_blank');
+          }, soundcloudButtons.length * 300 + 400);
+        });
+      });
+    });
+  </script>
+
+</body>
 </html>
