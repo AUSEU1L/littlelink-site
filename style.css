@@ -23,7 +23,7 @@ body {
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
   width: 100%;
-  max-width: 600px; /* Logo için geniş alan */
+  max-width: 600px; /* Logo ve içerik için geniş alan */
   text-align: center;
 }
 
@@ -35,7 +35,6 @@ body {
 }
 
 .brand-name {
-  /* Eğer istersen burayı gizleyebilirsin */
   font-size: 36px;
   font-weight: 700;
   margin: 0 0 10px 0;
@@ -48,30 +47,36 @@ body {
   color: #aaa;
   font-size: 30px;
   margin-bottom: 25px;
-  font-family: 'NECK ROMANCER Regular', sans-serif;
+  font-family: 'NECK ROMANCER Regular', cursive, sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
 }
 
+/* Butonlar için ortak link-buttons konteyneri */
+.link-buttons {
+  margin-top: 20px;
+}
+
+/* Butonların ortak stili */
 .link-buttons a {
   display: block;
-  margin: 15px 0;
+  margin: 12px 0;
   padding: 14px 0;
   border-radius: 8px;
   color: #e0e0e0;
   text-decoration: none;
   font-weight: 700;
   font-family: 'NECK ROMANCER Regular', cursive, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  user-select: none;
+  border: 1px solid #c0c8d6;
   background: linear-gradient(135deg, #6e7a8a, #a1a9b8 40%, #8a94a3 60%, #4a5160);
   box-shadow:
     inset 0 1px 3px rgba(255, 255, 255, 0.7),
     inset 0 -1px 6px rgba(0, 0, 0, 0.7),
     0 4px 6px rgba(0, 0, 0, 0.6);
-  letter-spacing: 2px;
-  text-transform: uppercase;
   transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease;
-  user-select: none;
-  border: 1px solid #c0c8d6;
 }
 
 .link-buttons a:hover {
@@ -92,11 +97,68 @@ body {
   border-color: #a0a8b8;
 }
 
+/* İki kolonlu satır düzeni */
+.row-two-columns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px 0 25px 0;
+}
+
+.row-two-columns .column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 200px; /* İstersen değiştirilebilir */
+}
+
+/* Sosyal medya renkleri ve özel buton stilleri */
+
+/* Instagram butonu */
+.instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+  border-color: #a23274;
+}
+
+/* TikTok butonu */
+.tiktok {
+  background: #010101;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+/* YouTube butonu */
+.youtube {
+  background: #FF0000;
+  border-color: #cc0000;
+}
+
+/* Spotify metalik yeşil */
+.spotify.metallic-green {
+  background: linear-gradient(135deg, #1DB954 0%, #1db954cc 50%, #1DB954aa 100%);
+  border: 1px solid #1fa84a;
+  box-shadow:
+    inset 0 0 10px #1DB954,
+    0 3px 6px rgba(29, 185, 84, 0.6);
+  color: #d0f2c7;
+}
+
+/* SoundCloud metalik gri-turuncu */
+.soundcloud.metallic-grey-orange {
+  background: linear-gradient(135deg, #6b4c27, #f27324);
+  border: 1px solid #d97a23;
+  box-shadow:
+    inset 0 0 8px #f27324,
+    0 3px 6px rgba(251, 143, 34, 0.6);
+  color: #f5d4b1;
+}
+
+/* Footer stili */
 footer {
   font-size: 12px;
   margin-top: 30px;
   color: #666;
-  font-family: 'NECK ROMANCER Regular', sans-serif;
+  font-family: 'NECK ROMANCER Regular', cursive, sans-serif;
 }
 
 footer a {
