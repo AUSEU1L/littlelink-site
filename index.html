@@ -3,67 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cotard - Official Link Hub">
+  <meta name="description" content="Cotard - Official Link Hub" />
   <title>Cotard</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="images/logo.PNG" />
+  <link rel="icon" href="images/logo.PNG" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet" />
 </head>
 <body>
   <main class="container">
     <img src="images/logo.PNG" alt="Cotard Logo" class="logo" />
-
     <p class="subtitle">Multi-Genre Music Producer</p>
 
     <div class="link-buttons">
-      <!-- Instagram -->
       <a href="https://www.instagram.com/cotard/" target="_blank" class="instagram">Instagram</a>
-
-      <!-- TikTok -->
       <a href="https://www.tiktok.com/@cotard" target="_blank" class="tiktok">TikTok</a>
 
-      <a href="javascript:void(0)" class="spotify metallic-black toggle-btn" onclick="toggleTab('spotify')">Spotify</a>
-      <div id="spotify" class="tab" style="display:none;">
+      <button class="spotify metallic-black toggle-btn" onclick="toggleTab('spotify')">Spotify</button>
+      <div id="spotify" class="tab">
         <a href="https://open.spotify.com/intl-tr/artist/7jmEQhBTQ9WVTdHmclo7GC" target="_blank">Cotard</a>
         <a href="https://open.spotify.com/intl-tr/artist/2E6OrWYdJszPLi0WQRyv6K" target="_blank">Sinozoph</a>
         <a href="https://open.spotify.com/intl-tr/artist/5oDhbTZKQ99UfFX60mrn3W" target="_blank">Cotard Beatz</a>
         <a href="https://open.spotify.com/intl-tr/artist/5oDhbTZKQ99UfFX60mrn3W" target="_blank">Kanichen</a>
       </div>
 
-      <a href="javascript:void(0)" class="soundcloud metallic-black toggle-btn" onclick="toggleTab('soundcloud')">SoundCloud</a>
-      <div id="soundcloud" class="tab" style="display:none;">
+      <button class="soundcloud metallic-black toggle-btn" onclick="toggleTab('soundcloud')">SoundCloud</button>
+      <div id="soundcloud" class="tab">
         <a href="https://soundcloud.com/cotard" target="_blank">Cotard</a>
         <a href="http://soundcloud.com/kanichen-319883570" target="_blank">Kanichen</a>
       </div>
 
-      <!-- Youtube -->
       <a href="https://www.youtube.com/cotard" target="_blank" class="youtube">YouTube</a>
     </div>
 
     <footer>
-      <p><a href="#">© HAMAMBOII$CLUB ®KROMVISION </a> · All links by Cotard</p>
+      <p><a href="#">© HAMAMBOII$CLUB ®KROMVISION</a> · All links by Cotard</p>
     </footer>
   </main>
 
-  <script src="scripts.js"></script>
-
   <script>
-    // Toggle tab göster/gizle fonksiyonu
     function toggleTab(tabId) {
-      const tabs = document.querySelectorAll('.tab');
-      tabs.forEach(tab => {
-        if (tab.id === tabId) {
-          tab.style.display = tab.style.display === 'block' ? 'none' : 'block';
-        } else {
-          tab.style.display = 'none';
-        }
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.style.display = (tab.id === tabId && tab.style.display !== 'block') ? 'block' : 'none';
       });
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      const spotifyButtons = document.querySelectorAll('#spotify a');
-      const soundcloudButtons = document.querySelectorAll('#soundcloud a');
-
       function animateButtons(buttons) {
         buttons.forEach((btn, i) => {
           btn.style.opacity = '0';
@@ -72,34 +56,22 @@
             btn.classList.add('animate');
             btn.style.opacity = '1';
             btn.style.transform = 'scale(1)';
-            setTimeout(() => {
-              btn.classList.remove('animate');
-            }, 400);
+            setTimeout(() => btn.classList.remove('animate'), 400);
           }, i * 300);
         });
       }
 
-      spotifyButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          animateButtons(spotifyButtons);
-          setTimeout(() => {
-            window.open(btn.href, '_blank');
-          }, spotifyButtons.length * 300 + 400);
-        });
-      });
-
-      soundcloudButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          animateButtons(soundcloudButtons);
-          setTimeout(() => {
-            window.open(btn.href, '_blank');
-          }, soundcloudButtons.length * 300 + 400);
+      ['spotify', 'soundcloud'].forEach(id => {
+        const buttons = document.querySelectorAll(`#${id} a`);
+        buttons.forEach(btn => {
+          btn.addEventListener('click', e => {
+            e.preventDefault();
+            animateButtons(buttons);
+            setTimeout(() => window.open(btn.href, '_blank'), buttons.length * 300 + 400);
+          });
         });
       });
     });
   </script>
-
 </body>
 </html>
