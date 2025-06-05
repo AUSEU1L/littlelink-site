@@ -48,7 +48,7 @@ body {
   color: #aaa;
   font-size: 14px;
   margin-bottom: 25px;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'GotikaBlack', sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
 }
@@ -61,7 +61,7 @@ body {
   color: #e0e0e0;
   text-decoration: none;
   font-weight: 700;
-  font-family: 'UnifrakturCook', cursive, sans-serif;
+  font-family: 'GotikaBlack', cursive, sans-serif;
   background: linear-gradient(135deg, #6e7a8a, #a1a9b8 40%, #8a94a3 60%, #4a5160);
   box-shadow:
     inset 0 1px 3px rgba(255, 255, 255, 0.7),
@@ -96,7 +96,7 @@ footer {
   font-size: 12px;
   margin-top: 30px;
   color: #666;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'GotikaBlack', sans-serif;
 }
 
 footer a {
