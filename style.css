@@ -16,12 +16,13 @@ body {
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
   width: 100%;
-  max-width: 400px;
+  max-width: 600px; /* Container genişliğini artırdım */
   text-align: center;
 }
 
 .logo {
-  width: 120px;
+  width: 500px; /* Logoyu 500px yaptım */
+  max-width: 100%; /* Ekranı aşmaması için */
   margin-bottom: 20px;
 }
 
@@ -49,13 +50,11 @@ body {
   transition: transform 0.15s ease, box-shadow 0.2s ease;
 }
 
-/* Tıklama efekti */
 .link-buttons a:active {
   transform: scale(0.96);
   box-shadow: 0 2px 8px rgba(0,0,0,0.4) inset;
 }
 
-/* Her platforma özel renk */
 .spotify { background: #1DB954; }
 .youtube { background: #FF0000; }
 .instagram { background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af); }
