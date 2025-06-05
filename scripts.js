@@ -13,27 +13,27 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           btn.classList.remove('animate');
         }, 400);
-      }, i * 300);
+      }, i * 100); // daha kısa süre önerildi
     });
   }
 
-  spotifyButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      animateButtons(spotifyButtons);
-      setTimeout(() => {
-        window.open(btn.href, '_blank');
-      }, spotifyButtons.length * 300 + 400);
-    });
-  });
+  function setupSafeClick(buttons) {
+    buttons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const url = btn.href;
 
-  soundcloudButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      animateButtons(soundcloudButtons);
-      setTimeout(() => {
-        window.open(btn.href, '_blank');
-      }, soundcloudButtons.length * 300 + 400);
+        animateButtons(buttons);
+
+        // Yeni sekme açma girişimi kullanıcı etkileşimiyle hemen yapılmalı
+        const newTab = window.open(url, '_blank');
+        if (!newTab) {
+          alert("Tarayıcınız yeni sekme açmayı engelledi. Lütfen ayarları kontrol edin.");
+        }
+      });
     });
-  });
+  }
+
+  setupSafeClick(spotifyButtons);
+  setupSafeClick(soundcloudButtons);
 });
