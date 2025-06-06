@@ -93,7 +93,7 @@
       }
 
       ['spotify', 'soundcloud'].forEach(id => {
-        const buttons = document.querySelectorAll('#${id} a');
+        const buttons = document.querySelectorAll(`#${id} a`);
         buttons.forEach(btn => {
           btn.addEventListener('click', e => {
             e.preventDefault();
