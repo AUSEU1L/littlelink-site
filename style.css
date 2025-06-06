@@ -258,24 +258,3 @@ footer a {
               0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
-@keyframes spin-3d-clockwise {
-      from { transform: rotateY(0deg); }
-      to { transform: rotateY(360deg); }
-    }
-
-    @keyframes spin-3d-counterclockwise {
-      from { transform: rotateY(0deg); }
-      to { transform: rotateY(-360deg); }
-    }
-
-    .logo-left img {
-      animation: spin-3d-counterclockwise 20s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-      transform-style: preserve-3d;
-      backface-visibility: visible;
-    }
-
-    .logo-right img {
-      animation: spin-3d-clockwise 20s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-      transform-style: preserve-3d;
-      backface-visibility: visible;
-    }
