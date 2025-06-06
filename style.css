@@ -304,7 +304,7 @@ footer a {
 /* Mobil uyum */
 @media (max-width: 600px) {
   .footer-inner {
-    padding: 0 97px;
+    padding: 0 70px;
     flex-direction: row;
     flex-wrap: wrap;
     height: auto;
@@ -312,7 +312,7 @@ footer a {
   }
 
   .logo-hamamboii img {
-    height: 20px;
+    height: 35px;
   }
 
   .logo-kromvision img {
