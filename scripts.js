@@ -16,14 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }, i * 300);
     });
   }
-
+  
   spotifyButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       animateButtons(spotifyButtons);
-      setTimeout(() => {
-        window.open(btn.href, '_blank');
-      }, spotifyButtons.length * 300 + 400);
+       window.open(btn.href, '_blank');
     });
   });
 
@@ -31,10 +29,24 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       animateButtons(soundcloudButtons);
-      setTimeout(() => {
-        window.open(btn.href, '_blank');
-      }, soundcloudButtons.length * 300 + 400);
+       window.open(btn.href, '_blank');
     });
   });
 });
 
+function applyNegativeByTime() {
+  const hour = new Date().getHours();
+  const body = document.body;
+  if (hour >= 18 || hour < 6) {
+    body.style.filter = 'invert(1)';
+    body.style.backgroundColor = 'black';
+  } else {
+    body.style.filter = 'invert(0)';
+    body.style.backgroundColor = '';
+  }
+}
+
+window.onload = () => {
+  applyNegativeByTime();
+  setInterval(applyNegativeByTime, 60 * 1000); // her dakika kontrol et
+};
