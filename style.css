@@ -260,12 +260,13 @@ footer a {
 
 .custom-footer {
   padding: 10px 15px;
-  font-size: 10px;
+  font-size: 40px;
   color: white;
   background-color: #111111;
 }
 
-.footer-inner {
+/* footer-inner yerine footer-outer yaptık */
+.footer-outer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -293,7 +294,7 @@ footer a {
 }
 
 @media (max-width: 600px) {
-  .footer-inner {
+  .footer-outer {
     padding: 0 97px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -312,3 +313,5 @@ footer a {
     justify-content: center;
   }
 }
+
+
