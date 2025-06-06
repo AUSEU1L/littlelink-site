@@ -276,19 +276,16 @@ footer a {
   height: 65px;
 }
 
-/* Genel img ayarları */
 .footer-logo img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Hamamboii logosu */
 .logo-hamamboii img {
   height: 40px;
 }
 
-/* Kromvision logosu */
 .logo-kromvision img {
   height: 60px;
 }
