@@ -60,18 +60,19 @@
     max-width: 1000px;
     margin: 0 auto;
     flex-wrap: wrap;
+    perspective: 800px; /* 3D perspektif için */
   ">
     
-    <div style="display: flex; justify-content: center; align-items: center; width: 200px;">
-      <img src="images/hamamboii-logo.png" alt="HAMAMBOII$CLUB" style="height: 45px;"> <!-- Küçültüldü -->
+    <div class="logo-left" style="display: flex; justify-content: center; align-items: center; width: 200px;">
+      <img src="images/hamamboii-logo.png" alt="HAMAMBOII$CLUB" style="height: 65px; transform-style: preserve-3d; backface-visibility: visible;">
     </div>
 
     <div style="flex-grow: 1; display: flex; justify-content: center; align-items: center; text-align: center;">
       MADED BY AUSEU1L
     </div>
 
-    <div style="display: flex; justify-content: center; align-items: center; width: 200px;">
-      <img src="images/kromvision-logo.png" alt="KROMVISION" style="height: 60px;"> <!-- Küçültüldü -->
+    <div class="logo-right" style="display: flex; justify-content: center; align-items: center; width: 200px;">
+      <img src="images/kromvision-logo.png" alt="KROMVISION" style="height: 85px; transform-style: preserve-3d; backface-visibility: visible;">
     </div>
   </div>
 </footer>
