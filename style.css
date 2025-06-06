@@ -265,8 +265,7 @@ footer a {
   background-color: #111111;
 }
 
-/* footer-inner yerine footer-outer yaptık */
-.footer-outer {
+.footer-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -274,12 +273,24 @@ footer a {
   margin: 0 auto;
   flex-wrap: nowrap;
   gap: 10px;
-  height: 65px; /* Logoların yüksekliği kadar sabit yükseklik */
+  height: 65px;
 }
 
+/* Genel img ayarları */
 .footer-logo img {
-  height: 40px;
   max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hamamboii logosu */
+.logo-hamamboii img {
+  height: 40px;
+}
+
+/* Kromvision logosu */
+.logo-kromvision img {
+  height: 60px;
 }
 
 .footer-text {
@@ -290,11 +301,12 @@ footer a {
   text-align: center;
   font-size: 12px;
   color: #aaa;
-  height: 100%; /* İçeriğin tam ortalanması için */
+  height: 100%;
 }
 
+/* Mobil uyum */
 @media (max-width: 600px) {
-  .footer-outer {
+  .footer-inner {
     padding: 0 97px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -302,16 +314,21 @@ footer a {
     gap: 8px;
   }
 
-  .footer-logo img {
+  .logo-hamamboii img {
     height: 30px;
+  }
+
+  .logo-kromvision img {
+    height: 45px;
   }
 
   .footer-text {
     font-size: 10px;
-    order: 3; /* küçük ekranda yazıyı alta alır, istersen kaldırabiliriz */
+    order: 3;
     width: 100%;
     justify-content: center;
   }
 }
+
 
 
