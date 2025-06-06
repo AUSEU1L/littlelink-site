@@ -258,3 +258,45 @@ footer a {
               0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
+.custom-footer {
+  padding: 10px 15px;
+  font-size: 10px;
+  color: white;
+  background-color: #111111;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.footer-logo img {
+  height: 40px;
+  max-width: 100%;
+}
+
+.footer-text {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
+
+@media (max-width: 600px) {
+  .footer-inner {
+    padding: 0 10px;
+  }
+
+  .footer-logo img {
+    height: 30px;
+  }
+
+  .footer-text {
+    font-size: 10px;
+  }
+}
