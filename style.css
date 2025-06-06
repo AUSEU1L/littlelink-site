@@ -273,6 +273,7 @@ footer a {
   margin: 0 auto;
   flex-wrap: nowrap;
   gap: 10px;
+  height: 65px; /* Logoların yüksekliği kadar sabit yükseklik */
 }
 
 .footer-logo img {
@@ -282,14 +283,22 @@ footer a {
 
 .footer-text {
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-size: 12px;
   color: #aaa;
+  height: 100%; /* İçeriğin tam ortalanması için */
 }
 
 @media (max-width: 600px) {
   .footer-inner {
     padding: 0 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 8px;
   }
 
   .footer-logo img {
@@ -298,5 +307,8 @@ footer a {
 
   .footer-text {
     font-size: 10px;
+    order: 3; /* küçük ekranda yazıyı alta alır, istersen kaldırabiliriz */
+    width: 100%;
+    justify-content: center;
   }
 }
