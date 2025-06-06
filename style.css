@@ -216,7 +216,7 @@ footer a {
   border-radius: 12px;
 }
 
-/* Özel renkli butonlar */
+
 .cotard {
   background: linear-gradient(135deg, #4b6cb7, #182848);
   border: 1px solid #2f3e72;
@@ -241,7 +241,7 @@ footer a {
   color: #f0d1d6;
 }
 
-/* Animasyon */
+
 .link-buttons a.animate {
   transform: scale(1.1);
   opacity: 0.8;
