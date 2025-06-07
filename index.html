@@ -74,12 +74,22 @@
   function applyNegativeByTime() {
     const hour = new Date().getHours();
     const body = document.body;
+    const spotifyEmbed = document.querySelector('iframe[src*="spotify.com"]');
+
     if (hour >= 18 || hour < 6) {
       body.style.filter = 'invert(0)';
       body.style.backgroundColor = 'black';
+
+      if (spotifyEmbed) {ddddd
+        spotifyEmbed.style.filter = 'invert(1)'; // tekrar ters çevir → normal görünür
+      }
     } else {
       body.style.filter = 'invert(1)';
       body.style.backgroundColor = '';
+
+      if (spotifyEmbed) {
+        spotifyEmbed.style.filter = 'invert(1)';
+      }
     }
   }
 
